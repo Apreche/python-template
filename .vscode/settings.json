@@ -1,0 +1,18 @@
+{
+    "[python]": {
+        "editor.codeActionsOnSave": {
+            "source.fixAll": true,
+            "source.organizeImports": true
+        }
+    },
+    "python.defaultInterpreterPath": "./.venv/bin/python",
+    "python.terminal.activateEnvironment": true,
+    "search.exclude": {
+        "**/.devcontainer": true,
+        "**/.git": true,
+        "**/.venv": true,
+        "**/.vscode": true,
+        "poetry.lock": true,
+        "pyproject.toml": true
+    }
+}

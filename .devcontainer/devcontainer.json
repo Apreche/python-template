@@ -1,0 +1,25 @@
+{
+    "build": {"dockerfile": "Dockerfile"},
+    "containerEnv": {
+        "PYTHONUNBUFFERED": "1",               // Don't buffer Python output
+        "PYTHONFAULTHANDLER": "1",             // Print traceback on fault signal
+        "PYTHONDONTWRITEBYTECODE": "1",        // Don't make pyc files
+        "PIP_NO_CACHE_DIR": "on",
+        "PIP_DISABLE_PIP_VERSION_CHECK": "on", // Don't check for newer pip versions
+        "POETRY_VIRTUALENVS_IN_PROJECT": "1",  // Include virtualenv in .venv dir
+        "VIRTUAL_ENV_DISABLE_PROMPT": "1"      // Don't put virtualenv tag in prompt
+    },
+    //"postCreateCommand": "poetry install --no-ansi --no-root",
+    "postCreateCommand": "test -f pyproject.toml || poetry init; poetry install --no-ansi --no-root",
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                "ms-python.vscode-pylance",
+                "ms-python.python",
+                "charliermarsh.ruff",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    }
+}
