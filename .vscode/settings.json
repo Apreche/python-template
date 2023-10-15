@@ -12,7 +12,9 @@
         "**/.git": true,
         "**/.venv": true,
         "**/.vscode": true,
+        ".gitignore": true,
         "poetry.lock": true,
-        "pyproject.toml": true
+        "pyproject.toml": true,
+        "LICENSE": true
     }
 }
